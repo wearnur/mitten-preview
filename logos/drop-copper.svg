@@ -1,0 +1,19 @@
+<svg class="mark mark-drop" viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="256" height="256"><style>svg{--l-ink:#1f1c1a;--l-main:#e0702f;--l-hi:#f28c4b;--l-soft:#fde3d1;--l-spark:#fff}
+.mark-pin .pin{animation:mm-drop .9s cubic-bezier(.3,1.5,.5,1) .15s both}
+.mark-pin .ring{transform-box:fill-box;transform-origin:center;animation:mm-ring 2.6s ease-out 1.1s infinite}
+.mark-shine .gleam{animation:mm-gleam 5.5s ease-in-out .8s infinite}
+.mark-drop .mline{stroke-dasharray:100;stroke-dashoffset:100;animation:mm-draw 1s .1s cubic-bezier(.65,.05,.25,1) forwards}
+.mark-drop .drop{animation:mm-drip 3.2s ease-in 1.2s infinite}
+.spark{transform-box:fill-box;transform-origin:center;animation:mm-twinkle 3.6s ease-in-out 1.2s infinite}
+@keyframes mm-drop{from{transform:translateY(-18px);opacity:0}to{transform:none;opacity:1}}
+@keyframes mm-ring{0%{transform:scale(.5);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+@keyframes mm-gleam{0%{transform:translateX(-30px)}24%,100%{transform:translateX(86px)}}
+@keyframes mm-draw{to{stroke-dashoffset:0}}
+@keyframes mm-drip{0%{transform:translateY(-3px);opacity:0}15%,55%{transform:none;opacity:1}85%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+@keyframes mm-twinkle{0%,100%{transform:scale(.85) rotate(0)}45%{transform:scale(1.2) rotate(45deg)}60%{transform:scale(.95) rotate(45deg)}}
+@media (prefers-reduced-motion:reduce){.mark *{animation:none!important;stroke-dashoffset:0!important;opacity:1!important;transform:none!important}.mark-pin .ring{display:none}}
+</style>
+<rect x="4" y="10" width="56" height="50" rx="15" style="fill:var(--l-ink)"/>
+<path class="mline" pathLength="100" d="M16 49V25l16 16 16-16v24" fill="none" style="stroke:var(--l-main)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="drop" d="M32 1.5s-5.8 6.8-5.8 10.8a5.8 5.8 0 0 0 11.6 0c0-4-5.8-10.8-5.8-10.8z" style="fill:var(--l-hi)"/>
+</svg>
